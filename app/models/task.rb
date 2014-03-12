@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
-  def self.find_by_incomplete
+  def self.find_incomplete
     find_by_complete(false, order: 'created_at DESC')
   end
 end
